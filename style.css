@@ -1,0 +1,325 @@
+/* ------------------ تنظیمات اولیه ------------------ */
+
+body {
+    margin: 0;
+    font-family: "Vazir", sans-serif;
+    background-color: #1A1A1A;
+    color: #fff;
+    line-height: 1.8;
+}
+
+h1, h2, h3 {
+    color: #D4AF37;
+}
+
+/* ======= هدر اصلی index.html ======= */
+header {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('../images/restaurant-interior.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.65); /* تیره‌تر برای لوکس بودن */
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 60px;
+    color: #D4AF37;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 22px;
+    color: #F2F2F2;
+}
+
+body {
+    background-color: #1A1A1A; /* مشکی لوکس */
+    color: #fff;               /* متن سفید */
+}
+
+h1, h2, h3 {
+    color: #D4AF37; /* طلایی برای عناوین */
+}
+
+.menu-row {
+    background: #111; /* تیره برای لوکس بودن */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    color: #fff;
+}
+
+.menu-row .info h3 {
+    color: #D4AF37;
+}
+
+.menu-row .info p {
+    color: #ccc;
+}
+
+.about-page, .contact-page {
+    color: #fff;
+}
+
+.about-page h2, .contact-page h2 {
+    color: #D4AF37;
+}
+
+
+/* ------------------ بخش‌ها ------------------ */
+
+#menu {
+  padding: 40px;
+  background: #fdfdfd;
+}
+
+#menu h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 30px;
+  color: #333;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.menu-row {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.menu-row:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.menu-row img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-left: 20px;
+}
+
+.menu-row .info h3 {
+  font-size: 20px;
+  margin: 0 0 8px 0;
+  color: #444;
+}
+
+.menu-row .info p {
+  margin: 0;
+  font-size: 15px;
+  color: #666;
+}
+
+
+/* ====== هدر تمام‌صفحه (hero) و دکمه‌های طلایی ====== */
+
+/* هدر را تمام صفحه کن و محتوا را مرکز قرار بده */
+header {
+    min-height: 100vh;         /* ارتفاع کل صفحه */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;           /* فاصله جانبی */
+    position: relative;        /* برای overlay قبلی درست بمونه */
+    text-align: center;
+}
+
+/* اطمینان از اینکه متن بالای overlay قرار می‌گیرد */
+header h1, header p {
+    position: relative;
+    z-index: 2;
+}
+
+/* بخش لینک‌ها */
+.home-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 18px;
+    z-index: 2;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* دکمه‌ی طلایی */
+.home-links .btn {
+    background: #D4AF37;       /* طلایی */
+    color: #000;
+    padding: 12px 26px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+}
+
+/* hover/active */
+.home-links .btn:hover,
+.home-links .btn:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    background: #b89227;
+}
+
+/* واکنش‌گرا: دکمه‌ها در موبایل ردیف شوند */
+@media (max-width: 700px) {
+    .home-links {
+        gap: 12px;
+    }
+    .home-links .btn {
+        padding: 10px 18px;
+        font-size: 16px;
+    }
+}
+
+
+/* ======= هدر صفحات داخلی ======= */
+.internal-header {
+    background: #000;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 3px solid #D4AF37;
+}
+
+.internal-header h1 {
+    color: #D4AF37;
+    margin: 0;
+    font-size: 32px;
+}
+
+
+/* ======= صفحه درباره ما ======= */
+.about-page {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.about-page img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.about-page .text {
+    color: #fff;
+}
+
+.about-page h2 {
+    color: #D4AF37;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about-page p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #e5e5e5;
+}
+
+
+/* ======= صفحه تماس ======= */
+.contact-page {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    color: #fff;
+}
+
+.contact-page h2, 
+.contact-page h3 {
+    color: #D4AF37;
+}
+
+.contact-page p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* ======= دکمه بازگشت ======= */
+.back-btn {
+    display: inline-block;
+    margin: 20px;
+    background: #D4AF37;
+    color: #000;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #b89327;
+    transform: translateY(-3px);
+}
+
+footer {
+    background-color: #000;  /* مشکی کامل */
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 3px solid #D4AF37;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.logo-container img {
+    width: 800px;
+    height: auto;
+    border-radius: 20%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.logo-container img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+}
+
+.about-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+}
+
+.about-gallery img {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.about-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
