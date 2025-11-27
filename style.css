@@ -292,7 +292,7 @@ footer p {
 .logo-container img {
     width: 400px;
     height: auto;
-    border-radius: 20%;
+    border-radius: 100%;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     transition: 0.3s;
 }
@@ -323,4 +323,5 @@ footer p {
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(0,0,0,0.6);
 }
+
 
