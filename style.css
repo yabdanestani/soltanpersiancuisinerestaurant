@@ -289,27 +289,18 @@ footer p {
     margin: 5px 0;
 }
 
-/* ---- لوگو در صفحه اصلی ---- */
-.logo-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 .logo-container img {
-    width: 200px;       /* اندازه پیش‌فرض دسکتاپ */
-    max-width: 100%;    /* جلوگیری از بیرون زدن */
+    width: 800px;
     height: auto;
-    display: block;
-    margin: 0 auto;
+    border-radius: 20%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    transition: 0.3s;
 }
 
-/* ---- نسخه موبایل ---- */
-@media (max-width: 600px) {
-    .logo-container img {
-        width: 120px;   /* کوچک‌تر برای موبایل */
-    }
+.logo-container img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.7);
 }
-
 
 .about-gallery {
     display: flex;
@@ -332,129 +323,3 @@ footer p {
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(0,0,0,0.6);
 }
-
-
-header img {
-    width: 180px; /* اندازه پیش‌فرض */
-    max-width: 100%;
-    height: auto;
-}
-
-/* گوشی‌ها */
-@media (max-width: 600px) {
-    header img {
-        width: 120px;   /* کوچک‌تر شود */
-    }
-}
-
-header h1 {
-    font-size: 42px;
-    margin: 10px 0;
-}
-
-header p {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 28px;
-    }
-
-    header p {
-        font-size: 16px;
-    }
-}
-
-.home-links {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-}
-
-.home-links .btn {
-    background: #c0392b;
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 18px;
-    transition: 0.3s;
-}
-
-.home-links .btn:hover {
-    background: #a83224;
-}
-
-@media (max-width: 600px) {
-    .home-links .btn {
-        width: 100%;
-        text-align: center;
-        font-size: 16px;
-    }
-}
-
-
-/* ---- تضمینی: اندازه لوگو و هدر موبایل ---- */
-header .logo-container img,
-.logo-container img {
-  display: block !important;
-  width: 220px !important;   /* اندازه پیش‌فرض دسکتاپ */
-  max-width: 100% !important;
-  height: auto !important;
-  object-fit: contain !important;
-  margin: 0 auto !important;
-}
-
-/* اگر هدر شما یک بک‌گراند بزرگ داره، حتما محدودش کن */
-header {
-  background-size: cover !important;
-  background-position: center !important;
-  overflow: hidden !important;
-}
-
-/* اندازه هدر و متن برای موبایل */
-@media (max-width: 800px) {
-  header .logo-container img,
-  .logo-container img {
-    width: 120px !important;   /* اندازه موبایل */
-  }
-  header h1 {
-    font-size: 22px !important;
-    margin-top: 8px !important;
-  }
-  header p {
-    font-size: 14px !important;
-  }
-  .home-links .btn {
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-}
-
-/* لوگو همیشه داخل عرض صفحه بماند */
-header img,
-.logo img,
-.logo-container img {
-    max-width: 100% !important;
-    height: auto !important;
-    display: block !important;
-    margin: 0 auto !important;
-}
-
-/* اندازه لوگو در دسکتاپ */
-header img {
-    width: 220px !important;
-}
-
-/* اندازه لوگو در موبایل */
-@media (max-width: 768px) {
-    header img {
-        width: 120px !important;
-    }
-}
-
-
