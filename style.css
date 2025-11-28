@@ -325,3 +325,16 @@ footer p {
 }
 
 
+header img {
+    width: 180px; /* اندازه پیش‌فرض */
+    max-width: 100%;
+    height: auto;
+}
+
+/* گوشی‌ها */
+@media (max-width: 600px) {
+    header img {
+        width: 120px;   /* کوچک‌تر شود */
+    }
+}
+
