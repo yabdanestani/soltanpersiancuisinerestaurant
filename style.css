@@ -289,18 +289,30 @@ footer p {
     margin: 5px 0;
 }
 
+/* لوگو - اندازه مناسب روی همه دستگاه‌ها */
 .logo-container img {
-    width: 200px;
+    width: 200px;      /* اندازه پایه */
+    max-width: 50%;    /* حداکثر نصف عرض صفحه */
     height: auto;
     border-radius: 20%;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     transition: 0.3s;
 }
 
+/* حالت Hover */
 .logo-container img:hover {
     transform: scale(1.07);
     box-shadow: 0 8px 25px rgba(0,0,0,0.7);
 }
+
+/* ریسپانسیو موبایل عمودی */
+@media screen and (max-width: 600px) {
+    .logo-container img {
+        width: 120px;      /* کوچیک‌تر برای موبایل */
+        max-width: 70%;    /* هرگز از عرض صفحه بزرگتر نشود */
+    }
+}
+
 
 .about-gallery {
     display: flex;
@@ -323,4 +335,5 @@ footer p {
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(0,0,0,0.6);
 }
+
 
