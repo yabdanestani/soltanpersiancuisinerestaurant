@@ -289,18 +289,27 @@ footer p {
     margin: 5px 0;
 }
 
-.logo-container img {
-    width: 400px;
-    height: auto;
-    border-radius: 100%;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    transition: 0.3s;
+/* ---- لوگو در صفحه اصلی ---- */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.logo-container img:hover {
-    transform: scale(1.07);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+.logo-container img {
+    width: 200px;       /* اندازه پیش‌فرض دسکتاپ */
+    max-width: 100%;    /* جلوگیری از بیرون زدن */
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
+
+/* ---- نسخه موبایل ---- */
+@media (max-width: 600px) {
+    .logo-container img {
+        width: 120px;   /* کوچک‌تر برای موبایل */
+    }
+}
+
 
 .about-gallery {
     display: flex;
@@ -337,4 +346,5 @@ header img {
         width: 120px;   /* کوچک‌تر شود */
     }
 }
+
 
