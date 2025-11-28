@@ -435,3 +435,26 @@ header {
   }
 }
 
+/* لوگو همیشه داخل عرض صفحه بماند */
+header img,
+.logo img,
+.logo-container img {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+/* اندازه لوگو در دسکتاپ */
+header img {
+    width: 220px !important;
+}
+
+/* اندازه لوگو در موبایل */
+@media (max-width: 768px) {
+    header img {
+        width: 120px !important;
+    }
+}
+
+
