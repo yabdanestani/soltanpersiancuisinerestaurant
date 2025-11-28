@@ -398,3 +398,40 @@ header p {
 }
 
 
+/* ---- تضمینی: اندازه لوگو و هدر موبایل ---- */
+header .logo-container img,
+.logo-container img {
+  display: block !important;
+  width: 220px !important;   /* اندازه پیش‌فرض دسکتاپ */
+  max-width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  margin: 0 auto !important;
+}
+
+/* اگر هدر شما یک بک‌گراند بزرگ داره، حتما محدودش کن */
+header {
+  background-size: cover !important;
+  background-position: center !important;
+  overflow: hidden !important;
+}
+
+/* اندازه هدر و متن برای موبایل */
+@media (max-width: 800px) {
+  header .logo-container img,
+  .logo-container img {
+    width: 120px !important;   /* اندازه موبایل */
+  }
+  header h1 {
+    font-size: 22px !important;
+    margin-top: 8px !important;
+  }
+  header p {
+    font-size: 14px !important;
+  }
+  .home-links .btn {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
